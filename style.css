@@ -18,7 +18,7 @@ body {
   color: var(--darkgray);
   scroll-behavior: smooth;
   overflow: auto;
-  margin-bottom: 160px;
+  /* margin-bottom: 160px; */
 }
 
 header {
