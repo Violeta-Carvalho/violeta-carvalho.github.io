@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Lago</title>
+    <link rel="icon" href="assets/Símbolo.png" type="image/png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="mobile">
+      <a
+        class="button inverted-color"
+        href="http://api.whatsapp.com/send?phone=5577981163466"
+        target="_blank"
+        ><i class="fab fa-whatsapp"></i> <span>WHATSAPP</span></a
+      >
+      <a onclick="toggleMenu()" aria-label="Menu">
+        <i id="toggleButton" class="fa-solid fa-bars"></i>
+      </a>
+    </header>
+
+    <header class="desktop">
+      <h1>Clínica Lago</h1>
+
+      <ul>
+        <li><a onclick="goToSection('#inicio')">Home |</a></li>
+        <li>
+          <a onclick="goToSection('#sobre-a-clinica')">Sobre a Clínica |</a>
+        </li>
+        <li><a onclick="goToSection('#nosso-time')">Nosso Time |</a></li>
+        <li>
+          <a onclick="goToSection('#especialidades')">Especialidades |</a>
+        </li>
+        <li><a onclick="goToSection('#exames')">Exames |</a></li>
+        <li><a onclick="goToSection('#videos')">Vídeos |</a></li>
+        <li><a onclick="goToSection('#contatos')">Contatos</a></li>
+      </ul>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <nav class="side-menu" id="sideMenu">
+      <ul>
+        <li><a onclick="goToSection('#inicio')">Home</a></li>
+        <li>
+          <a onclick="goToSection('#sobre-a-clinica')">Sobre a Clínica</a>
+        </li>
+        <li><a onclick="goToSection('#nosso-time')">Nosso Time</a></li>
+        <li>
+          <a onclick="goToSection('#especialidades')">Especialidades</a>
+        </li>
+        <li><a onclick="goToSection('#exames')">Exames</a></li>
+        <li><a onclick="goToSection('#videos')">Vídeos</a></li>
+        <li><a onclick="goToSection('#contatos')">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio" class="hero-slideshow">
+        <div class="slide slide-1 active">
+          <div class="hero-content">
+            <div class="hero-title">
+              <img src="assets/logo_clinica_lago.png" />
+              <p>Cuidar da sua família e da sua saúde é o que nos move</p>
+            </div>
+            <a
+              class="button"
+              href="http://api.whatsapp.com/send?phone=5577981163466"
+              target="_blank"
+            >
+              <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide slide-2">
+          <div class="hero-content">
+            <div class="hero-title">
+              <img src="assets/logo_clinica_lago.png" />
+              <p>
+                Cardiologia<br />Medicina da Família<br />Clínica Geral<br />Ginecologia<br />Medicina
+                do Trabalho
+              </p>
+            </div>
+            <a
+              class="button"
+              href="http://api.whatsapp.com/send?phone=5577981163466"
+              target="_blank"
+            >
+              <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide slide-3">
+          <div class="hero-content">
+            <div class="hero-title">
+              <img src="assets/logo_clinica_lago.png" />
+              <p>
+                Ecodopplercardiograma Transtorácico<br />Teste Ergométrico<br />Mapa
+                24 Horas<br />Eletrocardiograma<br />Holter 24 Horas
+              </p>
+            </div>
+            <a
+              class="button"
+              href="http://api.whatsapp.com/send?phone=5577981163466"
+              target="_blank"
+            >
+              <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+            </a>
+          </div>
+        </div>
+        <div class="slideshow-dots"></div>
+      </section>
+
+      <section id="sobre-a-clinica" class="hero-slideshow">
+        <div class="section-title">
+          <img src="assets/Símbolo.png" />
+          <h2><strong>Sobre a Clínica</strong></h2>
+          <hr />
+        </div>
+        <div class="sobre-description">
+          <p>
+            Há 30 anos, nascíamos em Barreiras - BA, oferecendo atendimento em
+            Cardiologia. Com o passar do tempo, nossa família cresceu, e hoje,
+            orgulhosamente, expandimos nossos cuidados para Luís Eduardo
+            Magalhães, onde também oferecemos atendimento em Clínica Geral,
+            Medicina de Família e Nutrição, além de exames cadiológicos
+          </p>
+          <div class="clinica-slideshow">
+            <img src="assets/1.JPG" class="clinica-slide active" />
+            <img src="assets/2.JPG" class="clinica-slide" />
+            <img src="assets/3.JPG" class="clinica-slide" />
+            <img src="assets/4.JPG" class="clinica-slide" />
+            <img src="assets/5.JPG" class="clinica-slide" />
+            <img src="assets/6.JPG" class="clinica-slide" />
+            <img src="assets/7.JPG" class="clinica-slide" />
+            <img src="assets/8.JPG" class="clinica-slide" />
+            <img src="assets/9.JPG" class="clinica-slide" />
+            <img src="assets/10.JPG" class="clinica-slide" />
+
+            <button class="prev" onclick="changeClinicSlide(-1)">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="next" onclick="changeClinicSlide(1)">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosso-time" class="hero-slideshow gray-section">
+        <div class="section-title">
+          <img src="assets/Noso time.png" />
+          <h2><strong>Nosso Time</strong></h2>
+          <hr />
+        </div>
+        <div class="team-slideshow">
+          <div class="doctor-images">
+            <button id="prev-team-slide" class="slide-button">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <div id="doctorPic" class="doctor-pic"></div>
+            <button id="next-team-slide" class="slide-button">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="team-slide active">
+            <h3 class="doctor-name">Dr. Daniel Lago</h3>
+            <h3 class="doctor-specialty">Médico Cardiologista</h3>
+            <p class="doctor-description">
+              Cardiologista com mais de 10 anos de atuação na região Oeste da
+              Bahia, é especialista em Cardiologia e membro titular da Sociedade
+              Brasileira de Cardiologia. Realizou sua formação no Rio de
+              Janeiro, em instituições renomadas como a Santa Casa de
+              Misericórdia e o Hospital Pró-Cardíaco. Tem ampla experiência em
+              atendimento clinico e na realização de exames como ecocardiograma
+              e teste ergométrico, com participação em diversos congressos e
+              cursos de atualização na área.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Dr. Celso Lago</h3>
+            <h3 class="doctor-specialty">Cardiologista / Médico do Trabalho</h3>
+            <p class="doctor-description">
+              Médico formado pela Universidade Federal Fluminense e, desde 1993,
+              em atividade contínua no Oeste da Bahia, Dr. Celso foi um dos
+              primeiros cardiologistas a se estabelecer em Barreiras. Nascido e
+              formado no Rio de Janeiro, morou inicialmente no sul da Bahia,
+              posteriormente mudando para o Oeste Baiano, onde realizou
+              atendimento em diversas cidades. Especialista em Cardiologia e em
+              Medicina do Trabalho, atende atualmente na Clínica Lago e na
+              Policlínica Regional, em Barreiras.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Dra. Kelita Lago</h3>
+            <h3 class="doctor-specialty">Ginecologista</h3>
+            <p class="doctor-description">
+              Médica formada pela Univerdade Federal do Maranhão há mais de 46
+              anos, e com 30 anos de atuação em Ginecologia e Obstetrícia no
+              Oeste da Bahia. Referência na região, tem ampla experiência em
+              atendimento ginecológico, com foco no Climatério, tendo atuado em
+              cidades como Barreiras, São Desidério, Riachão das Neves e
+              Baianópolis. Atualmente, atende em Luís Eduardo Magalhães e
+              Barreiras, onde também acompanha pacientes no CTA.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Dra. Inara Lago</h3>
+            <h3 class="doctor-specialty">
+              Medicina da Família / Clínica Geral
+            </h3>
+            <p class="doctor-description">
+              Dra Inara tem sua trajetória profissional marcada pela atuação em
+              Atenção Primária, Saúde da Família e docência médica. Professora
+              da Faculdade de Medicina da UFOB desde 2015, possui mestrado em
+              Medicina da Família, tendo sido coordenadora do curso de Medicina
+              por dois anos. Atualmente, além do consultório na Clínica Lago,
+              também atua no CTA e no programa Melhor em Casa, em Luis Eduardo
+              Magalhães.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Âmile Anaiht</h3>
+            <h3 class="doctor-specialty">Nutricionista</h3>
+            <p class="doctor-description">
+              Âmile Anaith é nutricionista formada pela Faculdade de Ilhéus
+              desde 2014, com mais de 8 anos de experiência em atendimentos
+              clínicos e ambulatoriais. Pós-graduada em Nutrição Clínica e Saúde
+              Pública, é também especialista em Fitoterapia aplicada à Nutrição.
+              Está em constante atualização e já realizou formações voltadas ao
+              emagrecimento, educação nutricional e tratamento nutricional no
+              Diabetes Tipo II.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Dr. Paulo Henrique Mai</h3>
+            <h3 class="doctor-specialty">Psiquiatra</h3>
+            <p class="doctor-description">
+              Médico de Família e Comunidade com formação pela Universidade
+              Estadual de Maringá e especialista em Acupuntura. Tem
+              especialização em Psiquiatria pela Santa Casa de São Paulo. Atua
+              com foco em saúde integral, dor crônica, saúde mental e cannabis
+              medicinal. Realiza atendimentos sempre com escuta qualificada e
+              abordagem humanizada.
+            </p>
+          </div>
+
+          <div class="team-slide">
+            <h3 class="doctor-name">Dra. Natália Pierdoná</h3>
+            <h3 class="doctor-specialty">Psicóloga</h3>
+            <p class="doctor-description">
+              Médica de Família e Comunidade formada pela Universidade Católica
+              de Brasília, com residência pela Unievangélica-GO, especialização
+              em Psiquiatria e mestrado em Psicologia. Atua com escuta
+              acolhedora e decisões compartilhadas, com foco no cuidado de
+              mulheres, dor crônica e saúde mental, sempre valorizando o vínculo
+              e a integralidade.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="especialidades" class="hero-slideshow padded-section">
+        <div class="section-title">
+          <img src="assets/Nossas Especialidades.png" />
+          <h2><strong>Nossas Especialidades</strong></h2>
+          <hr />
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Consulta Clínica - Médica de Família</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Cuidamos da sua saúde de forma integral, acompanhando desde
+                pequenas queixas até a prevenção e o controle de doenças
+                crônicas. Ideal para quem busca atenção contínua e
+                personalizada.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Consulta Cardiológica</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Avaliação completa do coração, indicada para acompanhamento de
+                hipertensão, dores no peito, cansaço ou histórico familiar de
+                doenças cardíacas.
+              </p>
+              <p class="content-subtitle">Risco Cirúrgico</p>
+              <p>
+                Avaliação cardiológica específica para liberar procedimentos
+                cirúrgicos com segurança. Inclui consulta, exames e laudo
+                médico.
+              </p>
+              <p class="content-subtitle">Check-up Cardiológico</p>
+              <p>
+                Conjunto de exames e avaliação clínica voltados à prevenção de
+                doenças cardíacas. Ideal para quem deseja acompanhar a saúde do
+                coração de forma preventiva.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Consulta Ginecológica</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Atendimento acolhedor, com foco em saúde da mulher, climatério,
+                prevenção e exames ginecológicos.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Consulta Nutricional</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Acompanhamento com a nutricionista para promover hábitos
+                saudáveis, controlar doenças e alcançar equilíbrio alimentar.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Consulta em Medicina do Trabalho</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Essa consulta é voltada para avaliação clínica de trabalhadores,
+                com foco na prevenção de riscos ocupacionais e promoção da saúde
+                no ambiente profissional. Atendimentos voltados a exames
+                admissionais, demissionais, de retorno ao trabalho, entre
+                outros.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exames" class="hero-slideshow padded-section">
+        <div class="section-title">
+          <img src="assets/Exames.png" />
+          <h2><strong>Exames</strong></h2>
+          <hr />
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Ecodopplercardiograma Transtorácico (Adulto)</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Exame de imagem que avalia a anatomia e o funcionamento do
+                coração em tempo real. Indicado para diversos quadros cardíacos.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Teste Ergométrico (Adulto)</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Avalia o desempenho do coração durante o esforço físico.
+                Fundamental para diagnóstico de arritmias, dores torácicas e
+                avaliação pré-esportiva.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>MAPA 24 Horas (Adulto)</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Monitoramento da pressão arterial ao longo de 24h, essencial
+                para o diagnóstico de hipertensão e controle do tratamento.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Eletrocardiograma (Adulto e Infantil)</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Exame simples e rápido que registra a atividade elétrica do
+                coração, usado na triagem de diversos problemas cardíacos.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="expansible-text">
+            <div class="title">
+              <p>Holter 24 Horas (Adulto e Infantil)</p>
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="content">
+              <p>
+                Gravação contínua dos batimentos cardíacos por 24h para detectar
+                arritmias e alterações no ritmo cardíaco.
+              </p>
+              <a
+                class="button"
+                href="http://api.whatsapp.com/send?phone=5577981163466"
+                target="_blank"
+              >
+                <i class="fa-regular fa-calendar-days"></i> <span>AGENDAR</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="red-section unpadded-section">
+        <div class="section-title">
+          <img src="assets/Vídeos.png" />
+          <h2 class="black"><strong>Vídeos</strong></h2>
+          <hr class="white" />
+        </div>
+
+        <div class="video-slideshow">
+          <iframe
+            class="video-slide active"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/aTPE_rLqBcE"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <iframe
+            class="video-slide"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/j8oD9g95jGE"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <iframe
+            class="video-slide"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/aTPE_rLqBcE"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <button class="prev" onclick="changeVideoSlide(-1)">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button class="next" onclick="changeVideoSlide(1)">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="contatos" class="gray-section unpadded-section">
+        <div class="section-title">
+          <img src="assets/Onde estamos.png" class="onde-estamos" />
+          <h2><strong>Onde Estamos?</strong></h2>
+          <hr />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5016578817767!2d-44.99292032536382!3d-12.146211543759398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x75f8b7360134d81%3A0xc0fcc7402b81e165!2sCl%C3%ADnica%20Lago%20-%20Cardiologia%20e%20Ginecologia!5e0!3m2!1sen!2sbr!4v1750434865463!5m2!1sen!2sbr"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="contatos unpadded-section">
+        <div class="contact">
+          <p><strong>Unidade LEM</strong></p>
+          <p>Edifício Via Lajedo</p>
+          <p>Rua Piauí, nº 80 - Centro</p>
+          <p>Salas 27 e 28</p>
+          <p class="telefones"><strong>(77) 98116-3466</strong></p>
+        </div>
+        <hr />
+        <div class="contact">
+          <p><strong>Unidade Barreiras</strong></p>
+          <p>Rua Sandra de Paula, nº 108,</p>
+          <p>Sandra Regina</p>
+          <p class="telefones">
+            <strong>(77) 3611-6217 | (77) 99904-2500</strong>
+          </p>
+        </div>
+      </section>
+
+      <footer class="unpadded-section">
+        <p>© 2025 Clínica Lago. Todos os direitos reservados.</p>
+        <img src="/assets/thomaslogo.png" />
+      </footer>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
