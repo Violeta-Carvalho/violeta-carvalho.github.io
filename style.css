@@ -18,7 +18,6 @@ body {
   color: var(--darkgray);
   scroll-behavior: smooth;
   overflow: auto;
-  /* margin-bottom: 160px; */
 }
 
 header {
@@ -140,6 +139,7 @@ button {
 
 main {
   padding: 16px;
+  padding-bottom: 0px;
 }
 
 .hero-content {
