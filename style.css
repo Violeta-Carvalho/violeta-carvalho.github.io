@@ -287,12 +287,12 @@ main {
 
 .video-slideshow {
   position: relative;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   aspect-ratio: 16 / 9;
-  height: auto;
+  height: 100%;
   padding-bottom: 60px;
 }
 
